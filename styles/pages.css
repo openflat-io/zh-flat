@@ -1,0 +1,363 @@
+body{
+  background-color: #f9f9fb;
+  margin: 0;
+}
+
+a {
+  text-decoration: none; /* 去除默认的下划线 */
+  outline: none; /* 去除旧版浏览器的点击后的外虚线框 */
+  color: #000; /* 去除默认的颜色和点击后变化的颜色 */
+  }
+
+li{
+  list-style-type:none;
+}
+
+@keyframes movefromleft {
+  from {
+      opacity: 0;
+      transform: translateX(-150px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes movefromlefts {
+  from {
+      opacity: 0;
+      transform: translateX(150px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes lazys {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.viewBox{
+  width: 65%;
+  margin: 0 auto;
+}
+
+.vertical{
+  height: 60px;
+  display: inline-block;
+  border-right: solid #e8e8e9 1px;
+}
+
+nav{
+  height: 60px;
+  background-color: rgba(0,0,0,0.7);
+	position: sticky;
+	top:0;
+  z-index: 99;
+}
+
+.log-left > div{
+  display: flex;
+}
+
+.log-left > div p{
+  margin-right: 15px;
+}
+
+#nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav img{
+  width: 165px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+#nav img:hover{
+  cursor: pointer;
+}
+
+.navs{
+  display: flex;
+}
+
+.navs p{
+  color: #fff;
+  margin-right: 40px;
+}
+
+.navs p:hover{
+  cursor: pointer;
+}
+
+.banner > div h2{
+  font-size: 66px;
+  margin: 130px 0 0 0;
+  color: #333333;
+  text-align: center;
+}
+
+.banner > p{
+  font-size: 20px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.img-download{
+  width: 267px;
+  margin: 0 auto;
+}
+
+.img-download img{
+  height: 60px;
+}
+
+.img-download img:hover{
+  cursor: pointer;
+}
+
+.banner-img{
+  margin-top: 110px;
+}
+
+.animateItem{
+  margin-top: 200px;
+  display: flex;
+  position: relative;
+}
+
+#img-left {
+  animation: movefromleft 1.5s;
+  animation-fill-mode: forwards;
+}
+
+#img-right {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  animation: movefromlefts 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.part2{
+  margin-top: 225px;
+}
+
+.real p {
+  color: #000;
+}
+
+.part3{
+  margin-top: 125px;
+  width: 100%;
+  height: 670px;
+  background-color: #fff;
+  text-align: center;
+  padding: 130px 0 ;
+  box-sizing: border-box;
+}
+
+.part3 > .viewBox  h2{
+  font-size: 50px;
+}
+
+.part3 > .viewBox  h2{
+  animation: lazys 1.5s;
+  animation-fill-mode: forwards;
+}
+
+
+.part3 > .viewBox  p{
+  font-size: 24px;
+  color: #666;
+  animation: lazys 1.5s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.lazy{
+  margin-top:80px;
+}
+
+.lazy > img{
+  width: 1000px;
+  height: 110px;
+  animation: lazys 1.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.viscosity1{
+  width: 100%;
+  height: 900px;
+  background-color: #edf0ff;
+  position: sticky;
+	top:0;
+}
+
+.viscosity2{
+  width: 100%;
+  height: 900px;
+  background-color: #eaf9ff;
+  position: sticky;
+	top:0;
+}
+
+.viscosity3{
+  width: 100%;
+  height: 900px;
+  background-color: #f8f2ff;
+  position: sticky;
+	top:0;
+  left: 0;
+}
+
+.viscosity > .viewBox > p {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 130px 0 120px 0;
+  box-sizing: border-box;
+}
+
+.viscosity > .viewBox img{
+  width: 515px;
+}
+
+.clearfix{
+  display: flex;
+  justify-content: space-between;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.item > div{
+  width: 515px;
+}
+
+.left  p:first-child{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.part6{
+  margin: 100px 0 150px 0;
+  height: 493px;
+  box-sizing: border-box;
+}
+.part6 > .viewBox h2{
+  text-align: center;
+  font-size: 50px;
+}
+
+.items{
+  display: flex;
+}
+
+.items .real{
+  width: 100%;
+  height: 350px;
+  padding: 50px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.items .real:hover{
+  cursor: pointer;
+}
+
+.items .real img {
+  width: 115px;
+  height: 110px;
+  margin-left: 36px;
+}
+
+.items .real p:first-child{
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.part7{
+  text-align: center;
+  height: 600px;
+  background-color: #ffff;
+  padding: 120px 0;
+  box-sizing: border-box;
+}
+
+.part7  img{
+  width: 191px;
+  height: 46px;
+}
+
+.part7 h2{
+  font-size: 50px;
+}
+
+.part7 p{
+  font-size: 20px;
+  margin-bottom: 42px;
+}
+
+.footer{
+  height: 458px;
+  background-color: #3e3a39;
+}
+
+.footer .viewBox{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left{
+  display: flex;
+  margin-top: 50px;
+}
+
+.footer-left a{
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-left div:first-child{
+  margin-right: 100px;
+}
+
+.footer-left h4{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.copy-lefr{
+  color: #fff;
+  font-size: 16px;
+  margin-top: 50px;
+}
+.footer-right{
+  margin-top: 50px;
+  color: #fff;
+}
