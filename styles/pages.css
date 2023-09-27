@@ -13,6 +13,11 @@ li{
   list-style-type:none;
 }
 
+.active{
+  border-bottom: 2px solid red;
+  padding-bottom: 8px;
+}
+
 @keyframes movefromleft {
   from {
       opacity: 0;
@@ -314,11 +319,23 @@ nav{
 
 .part7 h2{
   font-size: 50px;
+  animation: lazys 1.5s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
 }
 
 .part7 p{
   font-size: 20px;
   margin-bottom: 42px;
+  animation: lazys 1.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.part7 a img{
+  animation: lazys 1.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 
 .footer{
