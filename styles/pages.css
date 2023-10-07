@@ -13,6 +13,47 @@ li{
   list-style-type:none;
 }
 
+
+@media (min-width:1120px) {
+
+  .mobile{
+    display: none;
+  }
+
+.nav-open{
+  display: none;
+}
+
+.lazy-2{
+  display: none;
+}
+
+@keyframes movefromleft {
+  from {
+      opacity: 0;
+      transform: translateX(-150px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(35%);
+  }
+}
+
+@keyframes movefromlefts {
+  from {
+      opacity: 0;
+      transform: translateX(150px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(-150%);
+  }
+}
+}
+
+
 .active{
   border-bottom: 2px solid red;
   padding-bottom: 8px;
@@ -66,6 +107,7 @@ li{
 }
 
 nav{
+  width: 100%;
   height: 60px;
   background-color: rgba(0,0,0,0.7);
 	position: sticky;
@@ -136,17 +178,19 @@ nav{
   cursor: pointer;
 }
 
-.banner-img{
+.banner-img img{
   margin-top: 110px;
+  width: 100%;
+  height: 146px;
 }
 
 .animateItem{
   margin-top: 200px;
-  display: flex;
   position: relative;
 }
 
-#img-left {
+#img-left{
+  width: 70%;
   animation: movefromleft 1.5s;
   animation-fill-mode: forwards;
 }
@@ -170,7 +214,6 @@ nav{
 .part3{
   margin-top: 125px;
   width: 100%;
-  height: 670px;
   background-color: #fff;
   text-align: center;
   padding: 130px 0 ;
@@ -200,7 +243,7 @@ nav{
 }
 
 .lazy > img{
-  width: 1000px;
+  width: 100%;
   height: 110px;
   animation: lazys 1.5s;
   animation-delay: 0.2s;
@@ -242,7 +285,7 @@ nav{
 }
 
 .viscosity > .viewBox img{
-  width: 515px;
+  width: 100%;
 }
 
 .clearfix{
@@ -279,18 +322,48 @@ nav{
 }
 
 .items .real{
-  width: 100%;
+  width: 33.3%;
   height: 350px;
   padding: 50px 20px;
   background-color: #fff;
   box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
-  margin-right: 15px;
   border-radius: 15px;
   box-sizing: border-box;
+  transition: all .3s;
 }
+
+.items .real:nth-child(1){
+  background:url('http://www.jide.com/images/banshu/part6_bg1.jpg');
+
+}
+
+.items .real:nth-child(2){
+  margin: 0 20px;
+  background: url('http://www.jide.com/images/banshu/part6_bg2.jpg');
+}
+
+.items .real:nth-child(3){
+  background:url('http://www.jide.com/images/banshu/part6_bg3.jpg') ;
+
+}
+
 
 .items .real:hover{
   cursor: pointer;
+}
+
+.items > .item1:hover{
+  width: 150%;
+  transition: all .3s;
+
+}
+.items > .item2:hover{
+  width: 150%;
+  transition: all .3s;
+}
+.items > .item3:hover{
+  width: 150%;
+  transition: all .3s;
 }
 
 .items .real img {
@@ -374,7 +447,161 @@ nav{
   font-size: 16px;
   margin-top: 50px;
 }
+
 .footer-right{
   margin-top: 50px;
   color: #fff;
+}
+
+.left-swiper{
+  width: 375px;
+  height: 100%;
+  background-color: pink;
+}
+
+.part2 > h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 95px;
+}
+
+.swiper-content{
+  display:flex;
+}
+
+.swiper{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box {
+  width: 810px;
+  height: 540px;
+}
+
+.box img {
+  width: 740px;
+  height: 480px;
+}
+
+ul li {
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+ul li:first-child {
+  opacity: 1;
+}
+
+.right-1 {
+  right: 0px;
+  display: none;
+}
+
+.left-2 {
+  left: 0px;
+  display: none;
+}
+
+ol {
+  position: absolute;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  bottom: 5px;
+}
+
+.current {
+  float: left;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.white {
+  width: 35px;
+  height: 10px;
+  background-color: blue;
+}
+
+@media (max-width: 1120px) {
+
+  .viscosity1{
+    height: 100%;
+  }
+
+  .clearfix,.item{
+    display: block;
+    height: 100%;
+  }
+
+  .pc{
+    display: none;
+  }
+
+  .lazy-1{
+    display: none;
+  }
+
+  .lazy img{
+    height: 100%;
+  }
+
+  @keyframes movefromleft {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translateX(35%);
+    }
+  }
+  
+  @keyframes movefromlefts {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translateX(-150%);
+    }
+  }
+  .viewBox{
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+  }
+  
+  nav{
+    width: 100%;
+    height: 59px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0 20px;
+  }
+
+  .navs{
+    display: none;
+  }
+
+  #img-left img{
+    width: 212px;
+  }
+
+  #img-right img{
+    width: 189px;
+  }
+
+  .swiper-content{
+    display: block;
+  }
 }
