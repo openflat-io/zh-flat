@@ -16,6 +16,59 @@ li{
 
 @media (min-width:1120px) {
 
+  @keyframes animate{
+    from {
+   	  height: 0px;
+    	top : 400px;
+    }
+}
+
+.clearfix img{
+  width: 100%;
+}
+
+.part3 > div > .viewBox > div > h2{
+  font-size: 45px;
+  line-height: 75px;
+  margin-bottom: 50px;
+  animation: lazys 1.5s;
+  animation-fill-mode: forwards;
+}
+
+  .active-2{
+    width: 357px;
+    height: 277px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 50px 20px 20px;
+    margin: 25px 0;
+    box-shadow:0 0 12px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    animation: animate  .8s;
+    overflow: hidden;
+  }
+
+  .navs-item{
+    margin: 10px 0;
+    font-weight: 700;
+  }
+
+  .navs-item span{
+    cursor: pointer;
+  }
+
+  .real h3{
+    color: #002fa7;
+  }
+
+  .none{
+    display: none;
+  }
+
+  ol{
+    display: none;
+  }
+
   .footer-2{
     display: none;
   }
@@ -24,7 +77,11 @@ li{
     display: none;
   }
 
-  .lazy-2{
+  .lazy-3{
+    display: none;
+  }
+
+  .mobile-img{
     display: none;
   }
 
@@ -32,13 +89,13 @@ li{
     display: none;
   }
 
-.nav-open{
-  display: none;
-}
+  .nav-open{
+    display: none;
+  }
 
-.lazy-2{
-  display: none;
-}
+  .lazy-1 img{
+    width: 100%;
+  }
 
 @keyframes movefromleft {
   from {
@@ -48,7 +105,7 @@ li{
 
   to {
       opacity: 1;
-      transform: translateX(35%);
+      transform: translateX(0);
   }
 }
 
@@ -60,7 +117,7 @@ li{
 
   to {
       opacity: 1;
-      transform: translateX(-150%);
+      transform: translateX(0);
   }
 }
 }
@@ -69,30 +126,6 @@ li{
 .active{
   border-bottom: 2px solid red;
   padding-bottom: 8px;
-}
-
-@keyframes movefromleft {
-  from {
-      opacity: 0;
-      transform: translateX(-150px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateX(15%);
-  }
-}
-
-@keyframes movefromlefts {
-  from {
-      opacity: 0;
-      transform: translateX(150px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateX(-10%);
-  }
 }
 
 @keyframes lazys {
@@ -172,7 +205,7 @@ nav{
 
 .banner > p{
   font-size: 20px;
-  margin-top: 70px;
+  margin: 70px 0 40px 0;
   text-align: center;
 }
 
@@ -198,6 +231,7 @@ nav{
 .animateItem{
   margin-top: 200px;
   position: relative;
+  width: 1200px;
 }
 
 #img-left{
@@ -216,6 +250,7 @@ nav{
 
 .part2{
   margin-top: 225px;
+  padding-bottom:160px;
 }
 
 .real p {
@@ -223,25 +258,20 @@ nav{
 }
 
 .part3{
-  margin-top: 125px;
-  width: 100%;
   background-color: #fff;
   text-align: center;
   padding: 130px 0 ;
-  box-sizing: border-box;
 }
 
-.part3 > .viewBox  h2{
-  font-size: 50px;
-}
-
-.part3 > .viewBox  h2{
+.part3 img{
+  width: 100%;
   animation: lazys 1.5s;
+  animation-delay: 0.1s;
   animation-fill-mode: forwards;
 }
 
 
-.part3 > .viewBox  p{
+.part3 > div > .viewBox  p{
   font-size: 24px;
   color: #666;
   animation: lazys 1.5s;
@@ -253,7 +283,7 @@ nav{
   margin-top:80px;
 }
 
-.lazy > img{
+.pc-imgx  > img{
   width: 100%;
   height: 110px;
   animation: lazys 1.5s;
@@ -264,26 +294,25 @@ nav{
 .viscosity1{
   width: 100%;
   height: 900px;
-  background-color: #edf0ff;
   position: sticky;
 	top:0;
+  background-color: #edf0ff;
 }
 
 .viscosity2{
   width: 100%;
   height: 900px;
-  background-color: #eaf9ff;
   position: sticky;
 	top:0;
+  background-color: #eaf9ff;
 }
 
 .viscosity3{
   width: 100%;
   height: 900px;
-  background-color: #f8f2ff;
   position: sticky;
 	top:0;
-  left: 0;
+  background-color: #f8f2ff;
 }
 
 .viscosity > .viewBox > p {
@@ -464,44 +493,18 @@ nav{
   color: #fff;
 }
 
-.left-swiper{
-  width: 375px;
-  height: 100%;
-  background-color: pink;
-}
-
 .part2 > h2 {
   text-align: center;
-  font-size: 50px;
-  margin-bottom: 95px;
+  font-size: 46px;
+  margin-bottom: 150px;
 }
 
 .swiper-content{
   display:flex;
 }
 
-.swiper{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.box {
-  width: 810px;
-  height: 540px;
-}
-
-.box img {
-  width: 740px;
-  height: 480px;
-}
-
 ul li{
-  margin-top: 120px;
-  width: 100%;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%,-120%);
   opacity: 0;
   transition: 1s;
 }
@@ -518,14 +521,6 @@ ul li:first-child {
 .left-2 {
   left: 0px;
   display: none;
-}
-
-ol {
-  position: absolute;
-  left: 50%;
-  z-index: 999;
-  transform: translateX(-50%);
-  margin-top: 80px;
 }
 
 .current {
@@ -551,6 +546,91 @@ ol {
     background-color: #fff;
   }
   
+  .viscosity1,.viscosity2,.viscosity3{
+    background-color: rgba(0,0,0,0);
+  }
+
+  @keyframes movefromleft {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+  }
+  
+  @keyframes movefromlefts {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+  }
+
+  #img-left{
+    width: 70%;
+    animation: movefromleft 1.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  #img-right {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    animation: movefromlefts 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .item{
+    width: 375px;
+  }
+
+  .part2{
+    margin-top: 70px;
+  }
+
+  .part2 > h2 {
+    text-align: center;
+    font-size:20px;
+    margin: 0;
+  }
+  
+
+
+  ul li{
+    margin-top: 120px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-120%);
+    opacity: 0;
+    transition: 1s;
+  }
+  
+  ul li:first-child {
+    opacity: 1;
+  }
+  
+  ol {
+    position: absolute;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+    margin-top: 80px;
+  }
+
+  
+  .lazy-1{
+    display: none;
+  }
+
   .footer-left div:first-child{
     margin: 0;
   }
@@ -652,12 +732,22 @@ ol {
     font-size: 22px;
   }
 
-  .lazy{
+  .pc-img{
     display:none;
   }
 
-  .lazy-2 img{
-    width: 80%;
+  .mobile-img img{
+    margin: -50px 0 50px 0;
+    width: 90%;
+    animation: lazys 1.5s;
+    animation-delay: 0.15s;
+  }
+
+  .mobile-img-2 img{
+    margin-bottom: 50px;
+    width: 90%;
+    animation: lazys 1.5s;
+    animation-delay: 0.15s;
   }
 
   .left p:first-child{
@@ -674,8 +764,8 @@ ol {
   }
 
   .part3{
-    padding: 50px 0;
     margin: 0;
+    padding: 0 20px;
   }
 
   .part3 > .viewBox h2  {
@@ -687,6 +777,7 @@ ol {
   }
 
   .animateItem{
+    width: 100%;
     margin-top: 30px;
   }
   
@@ -719,6 +810,8 @@ ol {
     width: 40%;
     height: 45px;
     margin-top: -7px;
+    padding: 0 20px;
+
   }
 
   .box{
@@ -727,12 +820,17 @@ ol {
   }
 
   .box img{
-    width: 100%;
+    width: 90%;
     height: 100%;
+    padding: 0 20px;
   }
 
   .viscosity1{
     height: 100%;
+  }
+
+  .viscosity{
+    padding-bottom:55px ;
   }
 
   .clearfix,.item{
@@ -748,10 +846,6 @@ ol {
     display: none;
   }
 
-  .lazy-1{
-    display: none;
-  }
-
   .lazy img{
     height: 100%;
   }
@@ -759,6 +853,12 @@ ol {
   .viewBox{
     width: 100%;
     margin: 0 auto;
+  }
+
+  .mobile{
+    padding:0 20px;
+    background: linear-gradient(to bottom, #edf0ff, #efe2ff);
+    margin-bottom: 55px;
   }
   
   nav{

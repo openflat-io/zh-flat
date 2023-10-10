@@ -11,6 +11,21 @@ tabs.forEach((item, i) => {
     }
 })
 
+    const titleSwiper = document.querySelectorAll('.navs-item span')
+    const activeSpan = document.querySelectorAll(".navs-item div")
+    let preIndex = 0
+    titleSwiper.forEach((item, i) => {
+        item.onclick = function () {
+            titleSwiper[preIndex].classList.remove("none")
+            item.classList.add("none")
+            activeSpan[i].classList.remove("none")
+            activeSpan[i].classList.add("active-2")
+            activeSpan[preIndex].classList.remove("active-2")
+            activeSpan[preIndex].classList.add("none")
+            preIndex = i
+        }
+    })
+
 
 window.addEventListener('load', function () {
     const box = document.querySelector('.box');
@@ -35,6 +50,7 @@ window.addEventListener('load', function () {
     const timer = setInterval(function () {
         right.click();
     }, 2000);
+
 
     for (let i = 0; i < ul_lis.length; i++) {
 
