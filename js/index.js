@@ -11,21 +11,44 @@ tabs.forEach((item, i) => {
     }
 })
 
-    const titleSwiper = document.querySelectorAll('.navs-item span')
-    const activeSpan = document.querySelectorAll(".navs-item div")
-    let preIndex = 0
-    titleSwiper.forEach((item, i) => {
-        item.onclick = function () {
-            titleSwiper[preIndex].classList.remove("none")
-            item.classList.add("none")
-            activeSpan[i].classList.remove("none")
-            activeSpan[i].classList.add("active-2")
-            activeSpan[preIndex].classList.remove("active-2")
-            activeSpan[preIndex].classList.add("none")
-            preIndex = i
-        }
-    })
+const titleSwiper = document.querySelectorAll('.navs-item span')
+const activeSpan = document.querySelectorAll(".navs-item div")
+let preIndex = 0
+titleSwiper.forEach((item, i) => {
+    item.onclick = function () {
+        titleSwiper[preIndex].classList.remove("none")
+        item.classList.add("none")
+        activeSpan[i].classList.remove("none")
+        activeSpan[i].classList.add("active-2")
+        activeSpan[preIndex].classList.remove("active-2")
+        activeSpan[preIndex].classList.add("none")
+        preIndex = i
+    }
+})
 
+const mask = document.querySelector('.mask')
+const open_img = document.querySelector('.nav-open img')
+const mask_open = document.querySelector('.mask-open')
+const nav = document.querySelector("#nav")
+const spans = document.querySelectorAll(".top-meuns span")
+const subnav_items = document.querySelectorAll(".subnav_item")
+let maskIndex = 0
+
+spans.forEach((item, i) => {
+    item.onclick = function () {
+        subnav_items[i].classList.remove("subnav_item")
+        subnav_items[maskIndex].classList.add("subnav_item")
+        maskIndex = i
+    }
+})
+
+open_img.addEventListener("click", function () {
+    mask.style.display = 'block'
+})
+
+mask_open.addEventListener("click", function () {
+    mask.style.display = 'none'
+})
 
 window.addEventListener('load', function () {
     const box = document.querySelector('.box');
@@ -40,46 +63,30 @@ window.addEventListener('load', function () {
 
     box.addEventListener('mouseenter', function () {
         clearInterval(timer);
-        // timer = null;
     });
-
     box.addEventListener('mouseleave', function () {
             right.click();
     });
-    
     const timer = setInterval(function () {
         right.click();
     }, 2000);
-
-
     for (let i = 0; i < ul_lis.length; i++) {
-
         let li = document.createElement('li');
         li.className = 'current';
         li.setAttribute('index', i);
         ol.appendChild(li);
-
-        //添加注册事件  排他思想
         li.addEventListener('click', function () {
-
             for (let i = 0; i < ol.children.length; i++) {
                 ul_lis[i].style.opacity = '0';//排他思想：全部图片设置为透明
                 ol.children[i].className = 'current';
-
             } 
             this.className = 'current white';
-
             let index = this.getAttribute('index');
             ul_lis[index].style.opacity = '1';//留下需要显示的图片
-
             num = index;
             circle = index;
         });
-
     }
-    // ol.children[0].className = 'current white';
-    // 2.点击右侧按钮一 次, 图片往左播放一张, 以此类推, 左侧按钮同理。
-
     right.addEventListener('click', function () {
         if (flag) {
             flag = false;
@@ -93,34 +100,25 @@ window.addEventListener('load', function () {
             }
             ul_lis[num].style.opacity = '1';
             flag = true;
-
-            //变量控制小圆圈的变化
             circle++;
             if (circle == ol.children.length) {
                 circle = 0;
-
             }
-
             circlechange();
         }
-
     });
-
     function circlechange() {
         for (let i = 0; i < ol.children.length; i++) {
             ol.children[i].className = 'current';
         }
         ol.children[circle].className = 'current white';
     };
-
     left.addEventListener('click', function () {
-
         if (flag) {
             flag = false;
             //实现无缝滚动
             if (num == 0) {
                 num = ul.children.length - 1;
-
             }
             num--;
             if (num == -1) { num = 4; }
@@ -128,17 +126,12 @@ window.addEventListener('load', function () {
                 ul_lis[i].style.opacity = '0';
             }
             ul_lis[num].style.opacity = '1';
-
-            flag = true;//一次只执行完毕才可以点击下一次
-            //变量控制小圆圈的变化
+            flag = true;
             circle--;
             if (circle < 0) {
                 circle = ol.children.length - 1;
             }
-
             circlechange();
         }
-
     });
-
 });
