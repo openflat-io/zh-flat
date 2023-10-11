@@ -928,6 +928,7 @@ ul li:first-child {
   }
 
   #img-right img{
+    position: relative;
     width: 189px;
   }
 
