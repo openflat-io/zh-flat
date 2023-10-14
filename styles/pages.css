@@ -27,6 +27,17 @@ li{
   width: 100%;
 }
 
+
+ul li{
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+ul li:first-child {
+  opacity: 1;
+}
+
 .part3 > div > .viewBox > div > h2{
   font-size: 45px;
   line-height: 75px;
@@ -230,10 +241,6 @@ nav{
 .part2{
   margin-top: 225px;
   padding-bottom:160px;
-}
-
-.real p {
-  color: #000;
 }
 
 .part3{
@@ -481,16 +488,6 @@ nav{
   display:flex;
 }
 
-ul li{
-  position: absolute;
-  opacity: 0;
-  transition: 1s;
-}
-
-ul li:first-child {
-  opacity: 1;
-}
-
 .right-1 {
   right: 0px;
   display: none;
@@ -523,6 +520,44 @@ ul li:first-child {
   body{
     background-color: #fff;
   }
+
+  ul,li,ol {
+    list-style-type: none;
+  }
+
+  /* 轮播图最外层盒子 */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+
+.carousel ul {
+  /* 这个高度需要在JS里面动态添加 */
+}
+
+.carousel ul li {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  left: 0;
+  top: 0;
+  /* 使用 transform:translaX(300%) 暂时将 li 移动到屏幕外面去*/
+  -webkit-transform: translateX(300%);
+  transform: translateX(300%);
+}
+
+/* 小圆点盒子 */
+.carousel .points {
+  /* 未知宽度的盒子，使用 absolute 定位，结合 transform 的方式进行居中 */
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
 
   .mask{
     width: 100%;
@@ -646,32 +681,32 @@ ul li:first-child {
     animation-fill-mode: forwards;
   }
 
-  .item{
-    width: 375px;
-  }
-
   .part2{
     margin-top: 70px;
-    position: relative;
-    height: 395px;
+    height: 330px;
   }
 
   .part2 > h2 {
     text-align: center;
-    font-size:20px;
+    font-size:22px;
     margin: 0;
   }
-  
 
+  ul{
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 
   ul li{
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    transition: 1s;
+    flex-shrink: 0;
+    width: 110%;
+    height: 100%;
+  }
+
+  .real p{
+    padding-right:40px;
   }
 
   .lazy-1{
